@@ -16,8 +16,12 @@ public class FOX : MonoBehaviour
 
     private void Start()
     {
+        bool key = Input.GetKey(KeyCode.LeftAlt);
+        if (key)
+        {
         Rig = gameObject.AddComponent<Rigidbody2D>();
         transform.position = new Vector3(0.0f, -2.0f, 0.0f);
+        }
     }
 
     private void Update()
